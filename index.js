@@ -82,7 +82,7 @@ const server = http.createServer((req, res) => {
 
 
         async function findsomedata(client) {
-            const cursor = client.db("MobileStore").collection("Mobiles").find({});
+            const cursor = client.db("Mongo").collection("db").find({});
             const results = await cursor.toArray();
             //console.log(results);
             const data = (JSON.stringify(results));
